@@ -4,7 +4,20 @@
     <h1>My Cart</h1>
   </header>
 
-  <div class="panel panel-default items">
+  
+  <div class="alert alert-danger" role="alert" 
+    style=<%= cart.size != 0 ? 'display:none' : '' %>
+  >
+  <strong>Error!</strong> Your Shopping Cart is Empty.<hr>
+
+    <a href="/">
+      <button type="button" class="btn btn-success btn-lg btn-block">Go back to products</button>
+    </a>
+  </div>
+
+  <div class="panel panel-default items"
+    style=<%= cart.size == 0 ? 'display:none' : '' %>
+  >
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -32,7 +45,9 @@
     </table>
   </div>
 
-  <div class="row">
+  <div class="row"
+    style=<%= cart.size == 0 ? 'display:none' : '' %>
+  >
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
         <script

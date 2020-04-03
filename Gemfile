@@ -36,6 +36,9 @@ gem 'rmagick'
 gem 'stripe'
 gem 'faker'
 
+#for guides
+gem 'redcarpet', '~> 3.1.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
