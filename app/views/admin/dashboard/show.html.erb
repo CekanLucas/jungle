@@ -1,2 +1,18 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin <small>Dashboard</small></h1>
+
+  <table class="table table-striped table-primary">
+  <tbody>
+    <tr>
+      <td><strong class=text-primary>Number of Products</strong></td>
+      <td><h5 class='text-info'><%= @products_count %></h5></td>
+    </tr>
+    <tr>
+      <td><strong class=text-primary>Number of Categories</strong></td>
+      <td><h5 class='text-info'><%= @categories_count %></h5></td>
+    </tr>
+  </tbody>
+
+</table>
+  <a href="/admin/products">
+    <button type="button" class="btn btn-info btn-lg">Go to Admin List</button>
+  </a>
