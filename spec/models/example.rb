@@ -1,3 +1,0 @@
-describe StringCalculator do 
-  
-end
