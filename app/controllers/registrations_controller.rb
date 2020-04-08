@@ -4,12 +4,12 @@ class RegistrationsController < ApplicationController
   end
 
   def new
-    # TESTING:::: {"utf8"=>"✓", "authenticity_token"=>"1UuKGOStjcNTmSorg2/7YyG0MEFCkWuqwG11+al4FYKCujWz/Rjl9Ewxc/OxWKQQwB6/drat5T4ExITbu0ovnA==", "user"=>{"first_name"=>"Lucas", "last_name"=>"Cekan", "email"=>"CekanLucas@gmail.com"}, "commit"=>"Register Details", "controller"=>"registrations", "action"=>"new"}
-    # @user = User.new
     @user = User.new(user_params)
-    puts "TESTING:::: #{@user.inspect}"
-    @user.save 
-    redirect_to registration_path
+    if @user.save 
+      redirect_to login_path
+    else
+      redirect_to registration_path
+    end
   end
 
   private
