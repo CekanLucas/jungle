@@ -17,6 +17,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Any numbers for expirary date (as long as in the future) and CVC
+If it asks for phone number just go back and use normal sighnup with credit card info. 
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
@@ -25,3 +27,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screen Shots 
+
+<img src="./lib/screenshots/home_page.png">
+<img src="./lib/screenshots/login_page.png">
+<img src="./lib/screenshots/registration.png">
+<img src="./lib/screenshots/order_complete.png">
