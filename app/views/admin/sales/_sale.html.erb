@@ -1,0 +1,24 @@
+<tr>
+  <td>
+    <%= sale.name %>
+  </td>
+  <td>
+    <%= sale.starts_on %>
+  </td>
+  <td>
+    <%= sale.ends_on %>
+  </td>
+  <td>
+    <% if sale.finished? %>
+    <span class="label label-danger">Finished</span>
+    <% elsif sale.active?%>
+    <span class="label label-success">Active</span>
+    <% else %>
+    <span class="label label-warning">pending</span>
+    <% end %>
+  </td>
+  <td>
+    <p><%= sale.percent_off %>%</p>
+  </td>
+  <td>
+</tr>
