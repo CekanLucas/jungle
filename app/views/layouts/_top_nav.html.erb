@@ -30,9 +30,15 @@
         </li>
         
         <% if current_user %>
-          <li>
-            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          
+          <li> <%= link_to "Logout", '/logout' %> </li>
+          <li class="navbar-brand"> Signed in as 
+            <strong>
+              <%= current_user.first_name %> 
+              <%= current_user.last_name %>
+            </strong> 
           </li>
+        
         <% else %>
           <li> <%= link_to 'Login', '/login' %> </li>  
           <li> <%= link_to 'Register', registration_path %> </li>
