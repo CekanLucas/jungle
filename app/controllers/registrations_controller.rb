@@ -20,7 +20,8 @@ class RegistrationsController < ApplicationController
     params.require(:user).permit(
       :first_name,
       :last_name,
-      :email
+      :email,
+      :password
     )
   end
 end

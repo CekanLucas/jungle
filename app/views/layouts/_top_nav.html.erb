@@ -28,9 +28,16 @@
         <li>
           <%= link_to 'About', about_path(1) %>
         </li>
-        <li>
-          <%= link_to 'Register', registration_path %>
-        </li>
+        
+        <% if current_user %>
+          <li>
+            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          </li>
+        <% else %>
+          <li> <%= link_to 'Login', '/login' %> </li>  
+          <li> <%= link_to 'Register', registration_path %> </li>
+        <% end %>
+      
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
