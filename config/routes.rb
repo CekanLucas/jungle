@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     resources :categories, except: [:edit, :update, :show, :destroy]
   end
 
+  resource :registration, only: [:new, :show] do 
+    post :new
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

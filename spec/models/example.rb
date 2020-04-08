@@ -1,0 +1,3 @@
+describe StringCalculator do 
+  
+end
